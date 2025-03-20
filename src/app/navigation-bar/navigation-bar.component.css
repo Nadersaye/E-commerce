@@ -1,0 +1,10 @@
+.navbar {
+  padding: 10px 20px;
+}
+.cart-icon {
+  font-size: 1.3rem;
+  color: black;
+}
+.cart-icon:hover {
+  color: gray;
+}
