@@ -1,7 +1,7 @@
 
   <nav class="navbar navbar-expand-lg navbar-light bg-light shadow-sm">
       <div class="container">
-          <a class="navbar-brand fw-bold text-success" href="#">Products App</a>
+          <a class="navbar-brand fw-bold " [routerLink]="['/']" routerLinkActive="router-link-active" [routerLinkActiveOptions]="{exact:true}">Products App</a>
 
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
               <span class="navbar-toggler-icon"></span>
@@ -10,13 +10,13 @@
           <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
               <ul class="navbar-nav">
                   <li class="nav-item">
-                      <a class="nav-link" href="#">Register</a>
+                      <a class="nav-link" [routerLink]="['/register']" routerLinkActive="router-link-active">Register</a>
                   </li>
                   <li class="nav-item">
-                      <a class="nav-link" href="#">Login</a>
+                      <a class="nav-link" [routerLink]="['/login']" routerLinkActive="router-link-active" >Login</a>
                   </li>
                   <li class="nav-item">
-                      <a class="nav-link cart-icon" href="#">
+                      <a class="nav-link cart-icon" [routerLink]="['/cart']" routerLinkActive="router-link-active" >
                           <i class="fa fa-shopping-cart"></i>
                       </a>
                   </li>

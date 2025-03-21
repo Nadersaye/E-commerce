@@ -8,3 +8,6 @@
 .cart-icon:hover {
   color: gray;
 }
+.router-link-active{
+  color:green;
+}
