@@ -1,4 +1,4 @@
-<div class="card h-100 mx-2">
+<div class="card h-100 mx-1" (click)="viewItemDetails(productItem().id)" style="cursor: pointer;">
   <div class="product-card position-relative">
     @if (productItem().stock==0) {
       <span class="badge-stock" style="background-color: red;">Out of stock</span>
@@ -13,12 +13,18 @@
     <div class="product-content p-3">
       <h5 class="mt-3">{{productItem().title}}</h5>
       <p class="product-description">{{productItem().description}}</p>
-      <div class="rating">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+      <div class="mb-3">
+        <app-star-rating
+          [rating]="productItem().rating"
+          color="green"
+          [showRatingValue]="false">
+        </app-star-rating>
+      </div>
       <p class="mt-2">
-        <span class="old-price">{{(productItem().price + (productItem().price * productItem().discountPercentage / 100)).toFixed(2)|currency:"EGP"}} </span>
-        <strong>{{productItem().price | currency:'EGP'}}</strong>
+        <strong>{{productItem().price | currency:'EGP '}}</strong>
       </p>
-      <button class="btn btn-dark btn-cart">Add to Cart</button>
+      <!-- Stop propagation on Add to Cart to prevent navigation -->
+      <button class="btn btn-outline-success btn-cart" (click)="$event.stopPropagation()">Add to Cart</button>
     </div>
   </div>
 </div>
