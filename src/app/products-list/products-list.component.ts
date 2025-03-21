@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { ProductCardComponent } from "../product-card/product-card.component";
-import { Product } from '../product';
+import { Product } from '../models/product';
 
 @Component({
   selector: 'app-products-list',
