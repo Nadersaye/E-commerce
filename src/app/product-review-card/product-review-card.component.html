@@ -1,0 +1,18 @@
+<div class="card mb-3">
+  <div class="card-body">
+    <div class="d-flex justify-content-between mb-2">
+      <h5 class="card-title">{{review.reviewerName}}</h5>
+      <div class="rating">
+        @for (star of [1,2,3,4,5]; track $index) {
+          @if (star <= review.rating) {
+            <i class="bi bi-star-fill" style="color: green;"></i>
+          } @else {
+            <i class="bi bi-star" style="color: green;"></i>
+          }
+        }
+      </div>
+    </div>
+    <p class="card-text">{{review.comment}}</p>
+    <p class="card-text"><small class="text-muted">{{review.date | date}}</small></p>
+  </div>
+</div>
