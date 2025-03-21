@@ -1,0 +1,16 @@
+<p>star-rating works!</p>
+<div class="rating d-inline-block">
+  @for (star of stars; track $index) {
+    @if (star <= rating) {
+      <i class="bi bi-star-fill" [style.color]="color" [style.fontSize]="size"></i>
+    } @else if (star - 0.5 <= rating && star > rating) {
+      <i class="bi bi-star-half" [style.color]="color" [style.fontSize]="size"></i>
+    } @else {
+      <i class="bi bi-star" [style.color]="color" [style.fontSize]="size"></i>
+    }
+  }
+
+  @if (showRatingValue) {
+    <span class="ms-2 text-muted">({{rating}})</span>
+  }
+</div>

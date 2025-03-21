@@ -1,0 +1,8 @@
+.rating {
+  cursor: default;
+  user-select: none;
+}
+
+.bi {
+  display: inline-block;
+}
