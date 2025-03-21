@@ -1,20 +1,5 @@
-/*export interface Product {
-  id: number;
-  title: string;
-  description: string;
-  category: string;
-  price: number;
-  discountPercentage: number;
-  rating: number;
-  stock: number;
-  tags: string[];
-  brand: string;
-  sku: string;
-  warrantyInformation: string;
-  shippingInformation: string;
-  images: string[];
-  thumbnail: string;
-}*/
+import { Review } from "./review";
+
 export interface Product {
   id: number;
   title: string;
@@ -36,13 +21,7 @@ export interface Product {
   warrantyInformation: string;
   shippingInformation: string;
   availabilityStatus: string;
-  reviews: {
-    rating: number;
-    comment: string;
-    date: string;
-    reviewerName: string;
-    reviewerEmail: string;
-  }[];
+  reviews: Review[];
   returnPolicy: string;
   minimumOrderQuantity: number;
   meta: {
@@ -54,3 +33,4 @@ export interface Product {
   images: string[];
   thumbnail: string;
 }
+
