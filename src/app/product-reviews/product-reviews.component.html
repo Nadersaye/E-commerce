@@ -1,0 +1,13 @@
+<div class="row mt-5">
+  <div class="col-12">
+    <h3>Customer Reviews</h3>
+    <hr>
+    @if (reviews && reviews.length > 0) {
+      @for (review of reviews; track $index) {
+        <app-product-review-card [review]="review"></app-product-review-card>
+      }
+    } @else {
+      <p>No reviews yet for this product.</p>
+    }
+  </div>
+</div>
